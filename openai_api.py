@@ -2,6 +2,7 @@ import os
 import openai
 import time
 
+
 openai.api_key = os.getenv("RBH_OpenAI_Token")
 # 'text-ada-001'
 # 'text-curie-001'
