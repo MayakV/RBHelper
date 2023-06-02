@@ -1,5 +1,7 @@
 import os
 import flask
+import azure.functions as func
+from FlaskApp import app
 
 import uuid
 
@@ -68,5 +70,6 @@ def send_message(chatid):
     }
     # resp = requests.get(url, params=payload)
 
-print()
-app.run()
+if __name__ == "__main__":
+    print("server started")
+    app.run()
