@@ -56,6 +56,10 @@ jobs:
           path: |
             . 
             !venv/
+            !.idea/
+            !.git/
+            !.github/
+            !.__pycache__/
 
   deploy:
     runs-on: ubuntu-latest
