@@ -58,6 +58,11 @@ jobs:
           name: python-app
           path: .
 
+      - name: 'Run server'
+        shell: bash
+        run: |
+          flask run
+
       - name: 'Deploy to Azure Functions'
         uses: Azure/functions-action@v1
         id: deploy-to-function
