@@ -55,4 +55,10 @@ def echo_all(message):
     bot.send_message(message.chat.id, ans)
 
 
-bot.infinity_polling(interval=3)
+# bot.infinity_polling(interval=3)
+
+updater.start_webhook(listen="0.0.0.0",
+                       port=PORT,
+                       url_path="YOUR TOKEN HERE")
+updater.bot.setWebhook("YOUR WEB SERVER LINK HERE" + "YOUR TOKEN HERE")
+updater.idle()
