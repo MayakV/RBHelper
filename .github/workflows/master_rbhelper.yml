@@ -65,6 +65,6 @@ jobs:
           app-name: 'RBHelper'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_95249085CFC54A829B4CB2D25EAB57F8 }}
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE  }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
