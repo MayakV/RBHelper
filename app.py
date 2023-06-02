@@ -68,6 +68,5 @@ def send_message(chatid):
     }
     # resp = requests.get(url, params=payload)
 
-if __name__ == 'app':
-    print()
-    app.run()
+print()
+app.run()

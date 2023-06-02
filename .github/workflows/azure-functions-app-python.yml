@@ -74,13 +74,6 @@ jobs:
           name: python-app
           path: .
 
-      - name: 'Run the server'
-        shell: bash
-        run: |
-          pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-          flask run
-          popd
-
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         id: deploy-to-function
