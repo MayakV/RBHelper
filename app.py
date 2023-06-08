@@ -1,14 +1,12 @@
 import os
 import flask
 import azure.functions as func
-from FlaskApp import app
 
 import uuid
 
 # model = "ada:ft-personal:<YOUR_MODEL_HERE>"
 import bot
 from telebot.types import Update as Update
-
 
 WEBHOOK_HOST = '<ip/host where the bot is running>'
 WEBHOOK_PORT = 8443  # 443, 80, 88 or 8443 (port need to be 'open')
@@ -21,6 +19,7 @@ WEBHOOK_URL_BASE = "https://%s:%s" % (WEBHOOK_HOST, WEBHOOK_PORT)
 WEBHOOK_URL_PATH = "/%s/" % (bot.TG_TOKEN)
 
 app = flask.Flask(__name__)
+
 
 # OPENAI_API_KEY = os.getenv("RBH_OpenAI_Token")
 # if not OPENAI_API_KEY:
@@ -65,8 +64,8 @@ def webhook():
 def send_message(chatid):
     url = "https://api.telegram.org/bot{}/sendMessage".format(key)
     payload = {
-        "text":"heyy",
-        "chat_id":chatid
+        "text": "heyy",
+        "chat_id": chatid
     }
     # resp = requests.get(url, params=payload)
 
