@@ -51,7 +51,9 @@ jobs:
 
       - name: Run Flask server
         run: |
-          flask run
+          flask run &
+        env:
+          DBNAME: test
 
 # --target=".python_packages/lib/site-packages"
 #      - name: Make sure Python code is all compilable
