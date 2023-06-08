@@ -47,7 +47,7 @@ app = flask.Flask(__name__)
 # Empty webserver index, return nothing, just http 200
 @app.route('/', methods=['GET', 'HEAD'])
 def index():
-    return ''
+    return 'Hey'
 
 
 # Process webhook calls
@@ -69,6 +69,7 @@ def send_message(chatid):
         "chat_id":chatid
     }
     # resp = requests.get(url, params=payload)
+
 
 if __name__ == "__main__":
     print("server started")
