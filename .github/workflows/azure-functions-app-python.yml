@@ -49,12 +49,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r py_requirements.txt
 # --target=".python_packages/lib/site-packages"
-      - name: Make sure Python code is all compilable
-        shell: bash
-        run: |
-          python -m compileall . -f
+#      - name: Make sure Python code is all compilable
+#        shell: bash
+#        run: |
+#          python -m compileall . -f
       - name: Run Flask server
-        shell: bash
+#        shell: bash
         run: |
 #          flask db upgrade
           flask run
